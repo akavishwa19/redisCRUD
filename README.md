@@ -1,6 +1,6 @@
-# Redis CRUD API
+# Redis CRUD APP
 
-This is a Node.js-based backend API using Express and Redis to perform basic CRUD (Create, Read, Update, Delete) operations. It supports storing, retrieving, updating, and deleting key-value pairs in Redis. The environment variables are managed through a `.env` file.
+This is a Node.js-based backend app using Express and Redis to perform basic CRUD (Create, Read, Update, Delete) operations. It supports storing, retrieving, updating, and deleting key-value pairs in Redis. The environment variables are managed through a `.env` file.
 
 ## Features
 
