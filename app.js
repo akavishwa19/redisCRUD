@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import 'dotenv/config'
 import { createClient } from "redis";
 
 const app = express();
@@ -8,10 +9,10 @@ app.use(cors());
 app.use(express.json());
 
 const client = createClient({
-  password: "2tg9P7jFkW8SGf3eF14IFb77v4GrrGT2",
+  password: process.env.REDIS_CLIENT_PASSWORD,
   socket: {
-    host: "redis-10420.c301.ap-south-1-1.ec2.redns.redis-cloud.com",
-    port: 10420,
+    host: process.env.REDIS_CLIENT_HOST,
+    port: process.env.REDIS_CLIENT_PORT,
   },
 });
 
@@ -95,7 +96,7 @@ app.delete("/", async (req, res) => {
   }
 });
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log("server listening on http://localhost:" + port);
